@@ -3,41 +3,50 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #111;
   font-family: sans-serif;
+  color: white;
 }
 
 #container {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 #startBtn {
   background-color: #3b82f6;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
+  padding: 12px 24px;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.2s;
-  height: fit-content;
+  font-size: 18px;
+  font-weight: 500;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 #startBtn:hover {
   background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+#startBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 #grid {
-  position: relative;
-  width: 200px;
-  height: 500px;
+  width: 200px;         /* Restored original width */
+  height: 500px;        /* Restored original height */
   background-color: #1c1c84;
+  position: relative;
   overflow: hidden;
   border: 2px solid #1c1c84;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 /* Falling logs */
