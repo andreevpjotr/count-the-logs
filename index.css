@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  font-family: sans-serif;
+}
+
+#container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+#startBtn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+  height: fit-content;
+}
+
+#startBtn:hover {
+  background-color: #2563eb;
+}
+
+#grid {
+  position: relative;
+  width: 200px;
+  height: 500px;
+  background-color: #1c1c84;
+  overflow: hidden;
+  border: 2px solid #1c1c84;
+  border-radius: 8px;
+}
+
+/* Falling logs */
+.log {
+  position: absolute;
+  top: 0;
+  height: 25px;
+  border-radius: 4px;
+  user-select: none;
+  pointer-events: none;
+}
