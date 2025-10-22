@@ -63,15 +63,23 @@ function startGame() {
   let lastSpawnY = 0;
   const spawnDelay = 300; // fallback delay in case logs are slow to move
 
-  function spawnNext() {
-    if (!active) return;
+function spawnNext() {
+  if (!active) return;
 
-    // Create the new log
-    createLog();
+  // Create the new log
+  createLog();
 
-    // Wait before spawning the next one — prevents overlap
-    setTimeout(spawnNext, 350); // 👈 Adjust delay between logs
+  // Base delay between logs
+  let delay = 350;
+
+  // Occasionally add a pause (e.g., 20% chance)
+  if (Math.random() < 0.1) {
+    delay += 800; // Extra pause time here
   }
+
+  // Spawn next log after delay
+  setTimeout(spawnNext, delay);
+}
 
   // Start spawning logs
   spawnNext();
